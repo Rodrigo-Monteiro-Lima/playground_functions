@@ -2,7 +2,7 @@
 function compareTrue(param1, param2) {
   // seu código aqui
 
-  if (param1 === true && param2 === true){
+  if (param1 === true && param2 === true) {
     return true;
   } return false;
 }
@@ -13,7 +13,6 @@ function calcArea(base, height) {
   let result = (base * height) / 2;
 
   return result;
-
 }
 
 // Desafio 3
@@ -30,18 +29,17 @@ function concatName(arrOfStrings) {
   let result = '';
 
   for (let index = 0; index < arrOfStrings.length; index += 1) {
-    if (index === arrOfStrings.length -1) {
+    if (index === arrOfStrings.length - 1) {
       result += arrOfStrings[index] + ', ';
     }
   }
-  
+
   result += arrOfStrings[0];
-  
   return result;
 }
 
 // Desafio 5
-function footballPoints(wins, ties,) {
+function footballPoints(wins, ties) {
   // seu código aqui
   let pontuation = 0;
 
@@ -61,7 +59,7 @@ function highestCount(arr) {
   let bigger = arr[0];
 
   for (let index = 0; index < arr.length; index += 1) {
-    if (arr[index] >= bigger) { 
+    if (arr[index] >= bigger) {
       bigger = arr[index];
     }
   }
@@ -78,9 +76,11 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+  }
+  if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
-  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+  }
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -90,7 +90,7 @@ function fizzBuzz(arr) {
   // seu código aqui
   let result = [];
 
-  for (let index = 0; index < arr.length; index +=1) {
+  for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] % 3 === 0 && arr[index] % 5 !== 0) {
       result.push('fizz');
     } else if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
@@ -108,23 +108,24 @@ function fizzBuzz(arr) {
 function encode(str) {
   // seu código aqui
   const vowels = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  }
-  let phraseEncoded = '';  
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
 
-  for  (let index in str) {
-    if (str[index] != 'a' && str[index] != 'e' && str[index] != 'i' && str[index] != 'o' && str[index] != 'u') {
+  let phraseEncoded = '';
+
+  for (let index in str) {
+    if (str[index] !== 'a' && str[index] !== 'e' && str[index] !== 'i' && str[index] !== 'o' && str[index] !== 'u') {
       phraseEncoded += str[index];
     } else {
-    for (let key in vowels){
-      if ( str[index] == key) {
-        phraseEncoded += vowels[key];
+      for (let key in vowels) {
+        if (str[index] === key) {
+          phraseEncoded += vowels[key];
+        }
       }
-    }
     }
   }
   return phraseEncoded;
@@ -137,19 +138,19 @@ function decode(str) {
     3: 'i',
     4: 'o',
     5: 'u',
-  }
+  };
 
-  let phraseDecoded = '';  
+  let phraseDecoded = '';
 
-  for  (let index in str) {
-    if (str[index] != '1' && str[index] != '2' && str[index] != '3' && str[index] != '4' && str[index] != '5') {
+  for (let index in str) {
+    if (str[index] !== '1' && str[index] !== '2' && str[index] !== '3' && str[index] !== '4' && str[index] !== '5') {
       phraseDecoded += str[index];
     } else {
-    for (let key in numbers){
-      if ( str[index] == key) {
-        phraseDecoded += numbers[key];
+      for (let key in numbers) {
+        if (str[index] === key) {
+          phraseDecoded += numbers[key];
+        }
       }
-    }
     }
   }
   return phraseDecoded;
@@ -158,7 +159,7 @@ function decode(str) {
 // Desafio 10
 function techList(arr, str) {
   // seu código aqui
-  let list = {}
+  let list = {};
   let arrOfList;
   let newArr = arr.sort();
 
@@ -166,9 +167,9 @@ function techList(arr, str) {
     arrOfList = 'Vazio!';
   } else {
     arrOfList = [];
-    for (let index in newArr) {
-      list['name'] = str;
-      list['tech'] = newArr[index];
+    for (let index = 0; index < newArr.length; index += 1) {
+      list.name = str;
+      list.tech = newArr[index];
       arrOfList.push(list);
       list = {};
     }
