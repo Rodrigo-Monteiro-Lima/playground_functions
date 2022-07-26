@@ -17,16 +17,27 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(setence) {
+function splitSentence(sentence) {
   // seu código aqui
-  let splitedWords = setence.split(' ');
+  let splitedWords = sentence.split(' ');
 
   return splitedWords;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrOfStrings) {
   // seu código aqui
+  let result = '';
+
+  for (let index = 0; index < arrOfStrings.length; index += 1) {
+    if (index === arrOfStrings.length -1) {
+      result += arrOfStrings[index] + ', ';
+    }
+  }
+  
+  result += arrOfStrings[0];
+  
+  return result;
 }
 
 // Desafio 5
