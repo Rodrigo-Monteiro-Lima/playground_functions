@@ -38,8 +38,29 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let trial = '';
+  let answer = 'true, true, true'
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    trial += 'true, ';
+  } else {
+    trial += 'false, ';
+  }
+  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+    trial += 'true, ';
+  } else {
+    trial += 'false, ';
+  }
+  if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
+    trial += 'true';
+  } else {
+    trial += 'false';
+  }
+  if (trial === answer) {
+    return true;
+  } return false;
+  
 }
 
 // Desafio 13
