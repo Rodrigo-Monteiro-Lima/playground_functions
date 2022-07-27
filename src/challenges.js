@@ -30,7 +30,7 @@ function concatName(arrOfStrings) {
 
   for (let index = 0; index < arrOfStrings.length; index += 1) {
     if (index === arrOfStrings.length - 1) {
-      result += arrOfStrings[index] + ', ';
+      result += `${arrOfStrings[index]}, `;
     }
   }
 
@@ -106,7 +106,6 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(str) {
-  // seu código aqui
   const vowels = {
     a: '1',
     e: '2',
@@ -114,7 +113,6 @@ function encode(str) {
     o: '4',
     u: '5',
   };
-
   let phraseEncoded = '';
 
   for (let index in str) {
